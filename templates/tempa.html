@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a路由测试</title>
+</head>
+<body>
+ <h1>i am father temp</h1>
+
+{% block contentBlock %}
+ <h1>father html temp</h1>
+{% endblock %}
+
+<h1>i am father temp last</h1>
+ <h2> this is test {{mint}}---------{{mstr}}</h2>
+
+mlist is : {{mlist[1]}}
+
+ #过滤器的使用
+mlist is : {{mlist | dore}}
+
+ #控制代码块
+{%for item in mlist%}
+ <li>{{item}}</li><hr>
+{%endfor%}
+ {%for num in range(10)%}
+ <li>{{num}}</li>
+ {%endfor%}
+{{user_id}}
+{%if vip == '0'%}
+ <h1>你没充钱</h1>
+ {%elif vip == '1'%}
+ <h1>vip1</h1>
+ {%endif%}
+
+
+</body>
+</html>
